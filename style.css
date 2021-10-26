@@ -13,20 +13,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: rgb(197, 197, 197);
 }
 
 main {
   background-image: url(img/tiles-5246420_1920.png);
-  height: 1000px;
-  background-repeat: no-repeat;
   background-size: cover;
-}
-
-footer {
-  display: flex;
-  height: 100px;
-  background-color: rgb(72, 72, 72);
+  height: auto;
 }
 
 .logo {
@@ -48,21 +43,22 @@ footer {
 }
 
 .menu2 {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 100%;
+  height: 50px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: rgb(72, 72, 72);
 }
 
-main li {
+header li {
   display: inline-block;
   vertical-align: top;
   position: relative;
 }
 
-main li a {
+header li a {
   display: block;
   padding: 10px;
   color: white;
@@ -70,12 +66,12 @@ main li a {
   align-items: center;
 }
 
-main li a:hover {
+header li a:hover {
   background-color: rgb(72, 72, 72);
   color: rgb(255, 149, 7);
 }
 
-main li:hover .sub-menu {
+header li:hover .sub-menu {
   display: block;
 }
 
@@ -98,30 +94,140 @@ main li:hover .sub-menu {
   color: black;
 }
 
-.container {
-background-color: rgb(72, 72, 72);
-height: 30px;
-width:30%;
-border: solid 2px rgb(255, 149, 7);
-margin-top: 140px;
+.container1 {
+  background-color: rgb(255, 255, 255);
 }
 
-.container .lien-promos {
+.d1 {
+  width: 900px;
+  height: 600px;
+  background-size: cover;
+background-repeat: no-repeat;
+  /* padding-top: 75%; */
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  background-color: #ededed;
+  margin: auto;
+  /* margin-top: 80px; */
+  /* margin-bottom: 80px; */
+  animation: fondu 20s ease-in-out infinite both;
+}
+
+.d1:hover {
+  animation-play-state: paused;
+}
+
+@keyframes fondu {
+  0% {
+    background-image: url("img/apple-gf61a502f2_1920.jpg");
+  }
+  33% {
+    background-image: url("img/laptop-g243b3ba9d_1920.jpg");
+  }
+  66% {
+    background-image: url("img/remote-control-ge804c124e_1920.jpg");
+  }
+  100% {
+    background-image: url("img/iphone-g2502d16d3_1920.jpg");
+  }
+}
+
+.container2 {
   display: flex;
-    flex-direction: column;
-    align-items: center;
-} 
-
-#carouselExemple {
-  width: 60%;
-  height: 428px;
-  margin: 0 auto;
-  margin-top: 20px;
-  border: solid 2px rgb(255, 149, 7);
+  flex-direction: column;
+  align-items: center;
 }
 
-.carousel-item img {
-  width: 100%;
+.fondmu {
+  width: 92%;
+  height: 220px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(126 122 122 / 66%);
+  border: 2px solid rgb(72, 72, 72);
+  overflow-x: auto;
+}
+
+.fondmu img {
+  width: auto;
+  height: 200px;
+  border: white solid 1px;
+}
+
+.imgmu {
+  /* margin-left: 2%; */
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 72, 72); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid; /* creates padding around scroll thumb */
+}
+
+.fondmu::-webkit-scrollbar {
+  width: 12px; /* width of the entire scrollbar */
+  height: 12px;
+}
+
+.fondmu::-webkit-scrollbar-track {
+}
+
+.fondmu::-webkit-scrollbar-thumb {
+  background-color: rgb(72, 72, 72); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid; /* creates padding around scroll thumb */
+}
+
+
+
+.avantages {
+  width: 92%;
+  height: 90px;
+  /* background-color: rgb(197, 197, 197); */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  border-radius: 10px;
+  border: 2px solid rgb(72, 72, 72);
+  text-align: center;
+  align-items: center;
+  background-color: rgb(126 122 122 / 66%);
+}
+
+.imgav {
+  width: 33%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: auto;
+  background-color: rgb(72, 72, 72);
 }
 
+footer h2 {
+  font-size: 20px;
+  }
+
+
+
+.lien-footer {
+  margin: 30px;
+}

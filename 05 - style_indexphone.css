@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgb(197, 197, 197);
+}
+
+main {
+  background-image: url(img/tiles-5246420_1920.png);
+  background-size: cover;
+  height: 100%;
+  
+}
+
+
+
+.logo {
+  height: 80px;
+  margin-left: 38px;
+}
+
+.search.bar {
+  display: flex;
+  height: 30px;
+
+}
+
+.searchBtn {
+  background-color:rgb(255, 149, 7);
+
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 20%;
+}
+
+.lien {
+  display: flex;
+
+  height: 50px;
+}
+
+.menu2 {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(72, 72, 72);
+}
+
+header li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+header li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+header li a:hover {
+  background-color: rgb(72, 72, 72);
+  color: rgb(255, 149, 7);
+}
+
+header li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(72, 72, 72);
+  width: 200px;
+}
+
+.sub-menu li {
+  display: block;
+}
+.sub-menu li a {
+  color: white;
+}
+
+.sub-menu li:hover a {
+  background-color: rgb(255, 149, 7);
+  color: black;
+}
+
+
+.princ  {
+  margin: 10px 20px;
+  border: 1px solid black;
+  /* width: 300px; */
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3),
+  0 1px 3px 1px rgba(60, 64, 67, 0.15);
+
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/* .vue {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 400px;
+} */
+
+.divGene {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 400px;
+  height:auto;
+  border: black solid 3px;
+}
+
+ .divProduit {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 120px;
+  height:auto;
+  border: black solid 3px;
+}
+
+.divDescri {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  width: 120px;
+  height:auto;
+  border: black solid 3px;
+}
+
+.action {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  height: auto;
+  width: 200px;
+ 
+}
+
+/* div {
+  width: 350px;
+  height: auto; */
+  /* border: black solid 1px; */
+/* } */
+ 
+ .princ img {
+  width: 200px;
+  height: 200px;
+} 
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-size: 3rem;
+}
+
+h3 {
+  font-size: 0.8rem;
+}
+
+.btn1 {
+  height: 40px;
+  width: 125px;
+  background-color:green;
+  border-radius: 15%;
+  display: block;
+}
+.btn2 {
+  height: 40px;
+  width: 125px;
+  background-color: red;
+  border-radius: 15%;
+  display: none;
+}
+
+/* .ouv {
+  display:block;
+}
+
+.fer {
+  display:none;
+} */
+
+.spanny {
+  color: blue;
+
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background-color: rgb(72, 72, 72);
+}
+
+footer h2 {
+font-size: 20px;
+}
+
+.lien-footer {
+  margin: 30px;
+}

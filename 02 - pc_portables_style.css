@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(197, 197, 197);
+}
+
+main {
+  background-image: url(img/tiles-5246420_1920.png);
+  height: auto;
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  height: 80px;
+  margin-left: 38px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+
+  width: 20%;
+}
+
+.lien {
+  display: flex;
+
+  height: 50px;
+}
+
+.menu2 {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgb(72, 72, 72);
+}
+
+main li {
+  display: inline-block;
+ vertical-align: top;
+  position: relative;
+}
+
+main li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+main li a:hover {
+  background-color: rgb(72, 72, 72);
+  color: rgb(255, 149, 7);
+}
+
+main li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  background-color: rgb(72, 72, 72);
+  width: 200px;
+}
+
+.sub-menu li {
+  display: block;
+}
+.sub-menu li a {
+  color: white;
+}
+
+.sub-menu li:hover a {
+  background-color: rgb(255, 149, 7);
+  color: black;
+}
+
+.container {
+background-color: rgb(72, 72, 72);
+height: 30px;
+width:30%;
+border: solid 2px rgb(255, 149, 7);
+margin-top: 140px;
+}
+
+.container .lien-promos {
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#carouselExemple {
+  width: 60%;
+  height: 428px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: solid 2px rgb(255, 149, 7);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+}
+
+
+.articles-container {
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+
+}
+
+footer {
+  display: flex;
+  height: 100px;
+  background-color: rgb(72, 72, 72);
+}
+
+.articles-container img {
+  border: 1px solid black;
+  margin: 10px 20px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.panier img  {
+
+ height: 60px;
+}
+
+button {
+  width: 80px;
+  border-radius: 50px;  
+  background-color: green;
+  color: black;
+  display: block;
+  margin-left: 33%;
+  cursor: pointer;
+}
+
+button2{
+  width: 80px;
+  border-radius: 50px;  
+cursor: pointer;
+  color: black;
+  display: block;
+  margin-left: 33%;
+  display: none;
+}
+h2 {
+  display: block;
+  margin-left: 25%;
+}
+
+.spanny {
+  color:red;
+  font-size: 22;
+}
