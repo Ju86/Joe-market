@@ -18,27 +18,34 @@
     <div class="container">
         <h1>Espace Administrateur</h1>
        <div class="sous-container">
-           <input type="text">
-           <input type="text">
-           <input type="text">
-           <input type="text">
-           <input type="text">
-           <input type="text">
-           <button class="modify">Modify</button>
-           <button class="cancel">Cancel</button>
+        <label for="idB">Id</label><input type="text" id="idB">
+        <label for="denominationB">Denomination</label> <input type="text" id="denominationB">
+        <label for="marqueB">Marque</label><input type="text" id="marqueB"> 
+        <label for="processeurB">Processeur</label><input type="text" id="processeurB"> 
+        <label for="dispoB">Dispo</label><input type="text" id="dispoB"> 
+        <label for="priceB">Price</label><input type="text" id="priceB"> 
+        <label for="imgB">Img</label><input type="text" id="imgB" placeholder="img/PCFIXE0.jpg"> 
+        <br>
+       
+           
+        <button id="insert">INSERT</button>
+        <button id="select">SELECT</button>
+        <button id="selectAll">SELECT ALL</button>
+        <button id="update">UPDATE</button>
+        <button id="delete">DELETE</button>
        </div>
     </div>
 
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">Id</th>
             <th scope="col">Denomination</th>
-            <th scope="col">Details</th>
+            <th scope="col">Marque</th>
+            <th scope="col">Processeur</th>
             <th scope="col">Dispo</th>
-            <th scope="col">Prix</th>
-            <th scope="col">Visu</th>
-            <th scope="col">Compo</th>
+            <th scope="col">Price</th>
+            <th scope="col">Img</th>
            
           </tr>
         </thead>
@@ -53,27 +60,156 @@
             <td>#</td>
             <td><button class="edit">Edit</button></td>
           </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td><button class="edit">Edit</button></td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <<td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td>#</td>
-            <td><button class="edit">Edit</button></td>
-          </tr>
+         
         </tbody>
       </table>
+
+
+      <script type="module">
+       // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBWZ_LwYDbcXKeNT-lACYeyNGFKZhc3jM0",
+    authDomain: "projet-commun-joe.firebaseapp.com",
+    projectId: "projet-commun-joe",
+    storageBucket: "projet-commun-joe.appspot.com",
+    messagingSenderId: "487260477956",
+    appId: "1:487260477956:web:993aa3e7b3bd033c76f351",
+    measurementId: "G-BKGSSCZNL8"
+  };
+
+  // Initialize Firebase
+  const app2 = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app2);
+
+        import { getDatabase, get, ref, set, child, update, remove }
+             from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+
+        const db = getDatabase();
+
+        // REFERENCES 
+
+        let idb = document.querySelector('#idB')
+        let denominationb = document.querySelector('#denominationB')
+        let marqueb = document.querySelector('#marqueB')
+        let processeurb = document.querySelector('#processeurB')
+        let dispob = document.querySelector('#dispoB')
+        let priceb = document.querySelector('#priceB')
+        let imgb = document.querySelector('#imgB')
+
+        let insertBtn = document.querySelector("#insert")
+        let selectBtn = document.querySelector("#select")
+        let selectAllBtn = document.querySelector("#selectAll")
+        let updateBtn = document.querySelector("#update")
+        let deleteBtn = document.querySelector("#delete")
+
+        // function insert
+
+        function insertData() {
+            set(ref(db, "pc fixes/" + idb.value), {
+                denomination: denominationb.value,
+                marque: marqueb.value,
+                Processeur: processeurb.value,
+                dispo: dispob.value,
+                price: priceb.value,
+                img: imgb.value,
+            })
+            .then (() => {
+                alert('data inserted')
+            })
+            .catch((error) => {
+                alert('error : ' + error)
+            })
+
+        }
+
+        insertBtn.addEventListener('click', insertData)
+
+
+        // fonction select
+
+        function selectData() {
+          const dbref = ref(db);
+
+          get(child(dbref, "pc fixes/" + idb.value))
+          .then( (snapshot) => {
+            if (snapshot.exists()) {
+              denominationb.value = snapshot.val().denomination;
+              marqueb.value = snapshot.val().marque;
+              processeurb.value = snapshot.val().processeur;
+              dispob.value = snapshot.val().dispo;
+              priceb.value = snapshot.val().price;
+              imgb.value = snapshot.val().img;
+            } else {
+              alert('No User Found !!!')
+            }
+          })
+          .catch((error) => {
+            alert('Error : ' + error)
+          })
+        }
+
+        selectBtn.addEventListener('click', selectData)
+
+        // fonction update 
+
+        function updateData() {
+          update(ref(db, "pc fixes/" + idb.value), {
+            denomination: denominationb.value,
+                marque: marqueb.value,
+                processeur: processeurb.value,
+                dispo: dispob.value,
+                price: priceb.value,
+                img: imgb.value,
+          })
+          .then (() => {
+                alert('data updated')
+            })
+            .catch((error) => {
+                alert('error : ' + error)
+            })
+        }
+
+        updateBtn.addEventListener('click', updateData)
+
+        // fonction delete
+
+        function deleteData() {
+          remove(ref(db, "pc fixes/" + idb.value))
+            
+          .then (() => {
+                alert('data removed')
+            })
+            .catch((error) => {
+                alert('error : ' + error)
+            })
+        }
+
+        deleteBtn.addEventListener('click', deleteData)
+
+
+        // fonction select all
+
+        function selectAllData() {
+          const users = fetch('https://projet-commun-joe-default-rtdb.firebaseio.com/pc fixes.json')
+          .then(async response => {
+            try {
+              const allMyUser = await response.json();
+              console.log(allMyUser);
+            } catch (e) {
+              console.log(e);
+            }
+          })
+        }
+
+        selectAllBtn.addEventListener('click', selectAllData)
+
+      </script>
   </body>
 </html>

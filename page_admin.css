@@ -6,8 +6,8 @@
 
 .container {
 
-    height: 500px;
-    width: 450px;
+    height: 700px;
+    width: 400px;
     background-color: grey;
 }
 
@@ -16,14 +16,14 @@ h1 {
 }
 
 .sous-container {
-    height:400px;
+    height:590px;
     width: 100%;
     border: 2px solid gainsboro;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 .modify {

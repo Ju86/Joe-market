@@ -2,11 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
+
+     
+    
 
 body {
   display: flex;
   flex-direction: column;
+ 
 }
 
 header {
@@ -16,6 +21,7 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   background-color: rgb(197, 197, 197);
+  
 }
 
 main {

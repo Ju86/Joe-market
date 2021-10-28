@@ -87,7 +87,7 @@ const displayArticle = () =>
     .then(async response => {
       try {
         const articles = await response.json();
-        // console.log(allMyUser);
+        console.log(articles);
         const articlesNodes = articles.map ((article) => {
             return createArticle(article)
         });

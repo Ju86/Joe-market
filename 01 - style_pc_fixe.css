@@ -144,8 +144,9 @@ button {
   background-color: green;
   color: black;
   display: block;
-  margin-left: 33%;
+ margin-left: 40%;
   cursor: pointer;
+  display: flex;
 }
 button2 {
   width: 80px;
@@ -153,7 +154,7 @@ button2 {
   cursor: pointer;
   color: black;
   display: block;
-  margin-left: 33%;
+  margin-left: 40%;
   display: none;
 }
 /* h2 {
