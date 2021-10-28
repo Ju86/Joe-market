@@ -9,7 +9,10 @@
 </head>
 <body>
     
+  <body>
+
     <header>
+
       <div class="logo">
         <span>
           <a href="index.html"
@@ -17,26 +20,31 @@
           /></a>
         </span>
       </div>
+      <div class="search bar">
+        <label for="site-search"></label>
+        <input
+          type="search"
+          id="site-search"
+          name="q"
+          aria-label="Search through site content"
+        />
+       <button class="searchBtn">Recherche</button>
+      </div>
       <div class="menu">
         <a href="compte.html" class="lien">
           <img src="img/compte.png" alt="Compte" />
         </a>
         <a href="panier.html" class="lien">
-          <div>
-            <span class="spanny"></span>
-          </div>
           <img src="img/panier.png" alt="Panier" />
+          <div class="countPanier"><span class="spanny"></span></div>
         </a>
         <a href="contact.html" class="lien">
           <img src="img/contact.png" alt="Contact" />
         </a>
       </div>
-    </header>
-
-    <main>
       <nav class="menu2">
         <li>
-          <a href="ordi.html">ORDINATEURS</a>
+          <a href="#">ORDINATEURS</a>
           <ul class="sub-menu">
             <li><a href="01 - pc_fixe.html">PC FIXES</a></li>
             <li><a href="02 - pc_portables.html">PC PORTABLES</a></li>
@@ -46,8 +54,8 @@
           <a href="#">IMAGE ET SON</a>
           <ul class="sub-menu">
             <li><a href="#">TV</a></li>
-            <li><a href="#">AMPLI</a></li>
-            <li><a href="#">ENCEINTES</a></li>
+            <li><a href="#">AMPLI - ENCEINTES</a></li>
+            <!-- <li><a href="#">ENCEINTES</a></li> -->
           </ul>
         </li>
         <li>
@@ -58,27 +66,32 @@
           </ul>
         </li>
       </nav>
+    </header>
+
+    <main>
+      
       <div class="articles-container">
        
-      
-        
+        </div>
     </main>
-<script src="02 - pc_portables.js"></script>
-    <footer>
-      <h2>REJOIGNEZ-NOUS :</h2>
-      <div class="réseaux-sociaux">
-        <a href="#" class="lien-footer">
-          <img src="img/facebook.png" alt="facebook" />
-        </a>
-        <a href="#" class="lien-footer">
-          <img src="img/twitter.png" alt="twitter" />
-        </a>
-        <a href="#" class="lien-footer">
-          <img src="img/instagram.png" alt="Instagram" />
-        </a>
-      </div>
 
-      <p class="copyright">Joe Market © 2021</p>
-    </footer>
+     <footer>
+
+        <h2>REJOIGNEZ-NOUS :</h2>
+        <div class="réseaux-sociaux">
+          <a href="#" class="lien-footer">
+            <img src="img/facebook.png" alt="facebook" />
+          </a>
+          <a href="#" class="lien-footer">
+            <img src="img/twitter.png" alt="twitter" />
+          </a>
+          <a href="#" class="lien-footer">
+            <img src="img/instagram.png" alt="Instagram" />
+          </a>
+        </div>
+        <p class="copyright">Joe Market © 2021</p>
+
+      </footer>
 </body>
+<script src="02 - pc_portables.js" type="module"></script>
 </html>

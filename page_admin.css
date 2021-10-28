@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+
+    height: 500px;
+    width: 450px;
+    background-color: grey;
+}
+
+h1 {
+    text-align: center;
+}
+
+.sous-container {
+    height:400px;
+    width: 100%;
+    border: 2px solid gainsboro;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.modify {
+    background-color: green;
+}
+
+.cancel {
+    background-color: red;
+}
+
+.edit {
+    background-color: green;
+    width: 50px;
+}

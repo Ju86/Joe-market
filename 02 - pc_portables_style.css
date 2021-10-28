@@ -2,24 +2,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
   display: flex;
   flex-direction: column;
+  
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   background-color: rgb(197, 197, 197);
 }
 
 main {
   background-image: url(img/tiles-5246420_1920.png);
-  height: auto;
-  
+
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -27,6 +30,15 @@ main {
 .logo {
   height: 80px;
   margin-left: 38px;
+}
+
+.search.bar {
+  display: flex;
+  height: 30px;
+}
+
+.searchBtn {
+  background-color: rgb(255, 149, 7);
 }
 
 .menu {
@@ -38,26 +50,41 @@ main {
 
 .lien {
   display: flex;
-
+  text-decoration: none;
   height: 50px;
+}
+
+.countPanier {
+  background-color: rgb(255, 149, 7);
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+}
+
+.spanny {
+  color: white;
+  font-size: 22px;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 .menu2 {
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background-color: rgb(72, 72, 72);
 }
 
-main li {
+header li {
   display: inline-block;
- vertical-align: top;
+  vertical-align: top;
   position: relative;
 }
 
-main li a {
+header li a {
   display: block;
   padding: 10px;
   color: white;
@@ -65,12 +92,12 @@ main li a {
   align-items: center;
 }
 
-main li a:hover {
+header li a:hover {
   background-color: rgb(72, 72, 72);
   color: rgb(255, 149, 7);
 }
 
-main li:hover .sub-menu {
+header li:hover .sub-menu {
   display: block;
 }
 
@@ -93,90 +120,60 @@ main li:hover .sub-menu {
   color: black;
 }
 
-.container {
-background-color: rgb(72, 72, 72);
-height: 30px;
-width:30%;
-border: solid 2px rgb(255, 149, 7);
-margin-top: 140px;
-}
-
-.container .lien-promos {
-  display: flex;
-    flex-direction: column;
-    align-items: center;
-} 
-
-#carouselExemple {
-  width: 60%;
-  height: 428px;
-  margin: 0 auto;
-  margin-top: 20px;
-  border: solid 2px rgb(255, 149, 7);
-}
-
-.carousel-item img {
-  width: 100%;
-  height: auto;
-}
-
-
 .articles-container {
   display: flex;
-  
+
   flex-wrap: wrap;
   justify-content: space-around;
-
-
-}
-
-footer {
-  display: flex;
-  height: 100px;
-  background-color: rgb(72, 72, 72);
 }
 
 .articles-container img {
-  border: 1px solid black;
-  margin: 10px 20px;
-  width: 450px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
-.panier img  {
-
- height: 60px;
+.panier img {
+  height: 60px;
 }
 
 button {
   width: 80px;
-  border-radius: 50px;  
+  border-radius: 50px;
   background-color: green;
   color: black;
   display: block;
   margin-left: 33%;
   cursor: pointer;
 }
-
-button2{
+button2 {
   width: 80px;
-  border-radius: 50px;  
-cursor: pointer;
+  border-radius: 50px;
+  cursor: pointer;
   color: black;
   display: block;
   margin-left: 33%;
   display: none;
 }
-h2 {
+/* h2 {
   display: block;
-  margin-left: 25%;
+} */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  background-color: rgb(72, 72, 72);
 }
 
-.spanny {
-  color:red;
-  font-size: 22;
+footer h2 {
+  font-size: 20px;
+}
+
+.lien-footer {
+  margin: 30px;
+  text-decoration: none;
 }

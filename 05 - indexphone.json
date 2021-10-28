@@ -1,6 +1,6 @@
 {
 
-    "telephones": [
+    "smartphones": [
     
     {
          "denomination": "Apple iPhone 13 Pro Max 128 Go ",
@@ -36,6 +36,132 @@
         "prix": 119.95,
         "visu": "crosscall.jpg",
         "compo": "Le Crosscall Core-S4 est le téléphone idéal pour les personnes recherchant la compacité, la solidité et la simplicité d'un téléphone à touches. 4G, il est équipé d'un processeur MediaTek MTK6731 Quad-Core cadencé à 1.1 GHz, de 512 Mo de RAM, d'une capacité de stockage de 4 Go et d'un écran de 2.4'"
-    }
-    ]
-    }
+    } ],
+
+        "pc fixes" : [
+          
+            {
+                "id": 1,
+                "denomination": "Alienware Aurora R12-295",
+                "marque": "Alienware",
+                "Processeur": "Intel Core i7-11700KF",
+                "dispo": "EN STOCK",
+                "price": 2199.95,
+                "img": "img/PCFIXE1.jpg"
+            },
+
+            {
+                "id": 2,
+                "denomination": "Dell XPS 8940-687",
+                "marque": "Dell",
+                "Processeur": "Intel Core i5-11400",
+                "dispo": "EN STOCK",
+                "price": 899.95,
+                "img": "img/PCFIXE2.jpg"
+            },
+
+            {
+                "id": 3,
+                "denomination": "Acer Predator Orion 5000",
+                "marque": "Acer",
+                "Processeur": "Intel Core i7-10700K",
+                "dispo": "EN STOCK",
+                "price": 2599.95,
+                "img": "img/PCFIXE3.jpg"
+            },
+
+            {
+                "id": 4,
+                "denomination": "Altyk - Le Grand PC - F1-I58-S05",
+                "marque": "Altyk",
+                "Processeur"	:"Intel Core i5-10400F" ,
+                "dispo": "EN STOCK",
+                "price": 699.95,
+                "img":"img/PCFIXE4.jpg"
+            },
+
+            {
+                "id": 5,
+                "denomination": "ASUS D340MF-I39100054R",
+                "marque": "Asus",
+                "Processeur": "Intel Core i3-9100",
+                "dispo": "EN STOCK",
+                "price": 559.95,
+                "img": "img/PCFIXE5.jpg"
+            },
+
+            {
+                "id": 6,
+                "denomination": "HP Omen GT12-1157nf",
+                "marque": "HP",
+                "Processeur": "AMD Ryzen 7 5700G",
+                "dispo": "EN STOCK",
+                "price": 1699.95,
+                "img": "img/PCFIXE6.jpg"
+            } ],
+
+          "pc portables" : [
+            {
+              "id": 1,
+              "denomination": "Alienware m15 R6-198",
+              "marque": "Alienware",
+              "Processeur": "Intel Core i7-11800H",
+              "dispo": "EN STOCK",
+              "price": 2599.95,
+              "img": "img/PCPORTABLE1.jpg"
+          },
+          {
+              "id": 2,
+              "denomination": "DELL XPS 13 9305",
+              "marque": "Dell",
+              "Processeur": "Intel Core i5-1135G7",
+              "dispo": "EN STOCK",
+              "price": 999.95,
+              "img": "img/PCPORTABLE2.jpg"
+          },
+          {
+              "id": 3,
+              "denomination": "MSI GE66 Raider ",
+              "marque": "MSI",
+              "Processeur": "Intel Core i7-10870H",
+              "dispo": "EN STOCK",
+              "price": 2099.95,
+              "img": "img/PCPORTABLE3.jpg"
+          },
+          {
+              "id": 4,
+              "denomination": "Razer Blade 17 ",
+              "marque": "Razer",
+              "Processeur":"Intel Core i7-11800H",
+              "dispo": "EN STOCK",
+              "price": 3699.95,
+              "img": "img/PCPORTABLE4.jpg"
+          },
+          {
+              "id": 5,
+              "denomination": "HP 17-cn0353nf",
+             "marque": "HP",
+              "Processeur": "Intel Core i3-1125G4",
+              "dispo": "EN STOCK",
+              "price": 599.95,
+              "img": "img/PCPORTABLE5.jpg"
+          },
+          {
+              "id": 6,
+              "denomination": "ASUS ExpertBook B1",
+              "marque": "ASUS",
+              "Processeur": "Intel Core i3-1115G4",
+              "dispo": "EN STOCK",
+              "price": 699.95,
+              "img": "img/PCPORTABLE6.jpg"
+          }
+          ]
+          ,
+          "admin" : [
+              {
+                  "email":"",
+                  "identifiant":"",
+                  "mdp":""
+              }
+          ]
+        }

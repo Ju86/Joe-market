@@ -1,68 +1,101 @@
-const articles = [ 
-    {
-        id: 1,
-        denomination: "Alienware m15 R6-198",
-        marque: 'Alienware',
-        Processeur: 'Intel Core i7-11800H',
-        dispo: 'EN STOCK',
-        price: 2599.95,
-        img: 'img/PCPORTABLE1.jpg'
-    },
-    {
-        id: 2,
-        denomination: "DELL XPS 13 9305",
-        marque: 'Dell',
-        Processeur: 'Intel Core i5-1135G7' ,
-        dispo: 'EN STOCK',
-        price: 999.95,
-        img: 'img/PCPORTABLE2.jpg'
-    },
-    {
-        id: 3,
-        denomination: "MSI GE66 Raider ",
-        marque: 'MSI',
-        Processeur: 'Intel Core i7-10870H',
-        dispo: 'EN STOCK',
-        price: 2099.95,
-        img: 'img/PCPORTABLE3.jpg'
-    },
-    {
-        id: 4,
-        denomination: "Razer Blade 17 ",
-        marque: 'Razer',
-        Processeur	:'Intel Core i7-11800H' ,
-        dispo: 'EN STOCK',
-        price: 3699.95,
-        img: 'img/PCPORTABLE4.jpg'
-    },
-    {
-        id: 5,
-        denomination: "HP 17-cn0353nf",
-        marque: 'HP',
-        Processeur: 'Intel Core i3-1125G4' ,
-        dispo: 'EN STOCK',
-        price: '599.95',
-        img: 'img/PCPORTABLE5.jpg'
-    },
-    {
-        id: 6,
-        denomination: "ASUS ExpertBook B1",
-        marque: 'ASUS',
-        Processeur: 'Intel Core i3-1115G4' ,
-        dispo: 'EN STOCK',
-        price: '699.95',
-        img: 'img/PCPORTABLE6.jpg'
-    }
+let articles = [ 
+    // {
+    //     id: 1,
+    //     denomination: "Alienware m15 R6-198",
+    //     marque: 'Alienware',
+    //     Processeur: 'Intel Core i7-11800H',
+    //     dispo: 'EN STOCK',
+    //     price: 2599.95,
+    //     img: 'img/PCPORTABLE1.jpg'
+    // },
+    // {
+    //     id: 2,
+    //     denomination: "DELL XPS 13 9305",
+    //     marque: 'Dell',
+    //     Processeur: 'Intel Core i5-1135G7' ,
+    //     dispo: 'EN STOCK',
+    //     price: 999.95,
+    //     img: 'img/PCPORTABLE2.jpg'
+    // },
+    // {
+    //     id: 3,
+    //     denomination: "MSI GE66 Raider ",
+    //     marque: 'MSI',
+    //     Processeur: 'Intel Core i7-10870H',
+    //     dispo: 'EN STOCK',
+    //     price: 2099.95,
+    //     img: 'img/PCPORTABLE3.jpg'
+    // },
+    // {
+    //     id: 4,
+    //     denomination: "Razer Blade 17 ",
+    //     marque: 'Razer',
+    //     Processeur	:'Intel Core i7-11800H' ,
+    //     dispo: 'EN STOCK',
+    //     price: 3699.95,
+    //     img: 'img/PCPORTABLE4.jpg'
+    // },
+    // {
+    //     id: 5,
+    //     denomination: "HP 17-cn0353nf",
+    //     marque: 'HP',
+    //     Processeur: 'Intel Core i3-1125G4' ,
+    //     dispo: 'EN STOCK',
+    //     price: '599.95',
+    //     img: 'img/PCPORTABLE5.jpg'
+    // },
+    // {
+    //     id: 6,
+    //     denomination: "ASUS ExpertBook B1",
+    //     marque: 'ASUS',
+    //     Processeur: 'Intel Core i3-1115G4' ,
+    //     dispo: 'EN STOCK',
+    //     price: '699.95',
+    //     img: 'img/PCPORTABLE6.jpg'
+    // }
 ]
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBWZ_LwYDbcXKeNT-lACYeyNGFKZhc3jM0",
+  authDomain: "projet-commun-joe.firebaseapp.com",
+  projectId: "projet-commun-joe",
+  storageBucket: "projet-commun-joe.appspot.com",
+  messagingSenderId: "487260477956",
+  appId: "1:487260477956:web:993aa3e7b3bd033c76f351",
+  measurementId: "G-BKGSSCZNL8"
+};
+
+// Initialize Firebase
+const app2 = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app2);
 
 let panier = [];
 
 const displayArticle = () =>
- {const articlesNodes = articles.map ((article) => {
+ {
+    const users = fetch('https://projet-commun-joe-default-rtdb.firebaseio.com/pc portables.json')
+    .then(async response => {
+      try {
+        const articles = await response.json(); 
+    
+    
+    const articlesNodes = articles.map ((article) => {
     return createArtcile(article)
 });
 app.append(...articlesNodes)
-} 
+} catch (e) {
+    console.log(e);
+  }
+})
+ }
 
 const app = document.querySelector('.articles-container');
 const span = document.querySelector('.spanny');

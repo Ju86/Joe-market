@@ -52,8 +52,23 @@ main {
 
 .lien {
   display: flex;
-
+  text-decoration: none;
   height: 50px;
+}
+
+.cart {
+  background-color: rgb(255, 149, 7);
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+}
+
+.spanny {
+  color: white;
+  font-size: 22px;
+
+  display: flex;
+  justify-content: space-around;
 }
 
 .menu2 {
@@ -212,10 +227,7 @@ h3 {
   display:none;
 } */
 
-.spanny {
-  color: blue;
 
-}
 
 footer {
   display: flex;
@@ -232,4 +244,5 @@ font-size: 20px;
 
 .lien-footer {
   margin: 30px;
+  text-decoration: none;
 }
