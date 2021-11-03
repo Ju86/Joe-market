@@ -1,60 +1,3 @@
-let articles = [ 
-    // {
-    //     id: 1,
-    //     denomination: "Alienware m15 R6-198",
-    //     marque: 'Alienware',
-    //     Processeur: 'Intel Core i7-11800H',
-    //     dispo: 'EN STOCK',
-    //     price: 2599.95,
-    //     img: 'img/PCPORTABLE1.jpg'
-    // },
-    // {
-    //     id: 2,
-    //     denomination: "DELL XPS 13 9305",
-    //     marque: 'Dell',
-    //     Processeur: 'Intel Core i5-1135G7' ,
-    //     dispo: 'EN STOCK',
-    //     price: 999.95,
-    //     img: 'img/PCPORTABLE2.jpg'
-    // },
-    // {
-    //     id: 3,
-    //     denomination: "MSI GE66 Raider ",
-    //     marque: 'MSI',
-    //     Processeur: 'Intel Core i7-10870H',
-    //     dispo: 'EN STOCK',
-    //     price: 2099.95,
-    //     img: 'img/PCPORTABLE3.jpg'
-    // },
-    // {
-    //     id: 4,
-    //     denomination: "Razer Blade 17 ",
-    //     marque: 'Razer',
-    //     Processeur	:'Intel Core i7-11800H' ,
-    //     dispo: 'EN STOCK',
-    //     price: 3699.95,
-    //     img: 'img/PCPORTABLE4.jpg'
-    // },
-    // {
-    //     id: 5,
-    //     denomination: "HP 17-cn0353nf",
-    //     marque: 'HP',
-    //     Processeur: 'Intel Core i3-1125G4' ,
-    //     dispo: 'EN STOCK',
-    //     price: '599.95',
-    //     img: 'img/PCPORTABLE5.jpg'
-    // },
-    // {
-    //     id: 6,
-    //     denomination: "ASUS ExpertBook B1",
-    //     marque: 'ASUS',
-    //     Processeur: 'Intel Core i3-1115G4' ,
-    //     dispo: 'EN STOCK',
-    //     price: '699.95',
-    //     img: 'img/PCPORTABLE6.jpg'
-    // }
-]
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
@@ -76,6 +19,11 @@ const firebaseConfig = {
 // Initialize Firebase
 const app2 = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app2);
+
+import { getDatabase, get, ref, set, child, update, remove }
+from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
+
+const db = getDatabase();
 
 let panier = [];
 
@@ -110,6 +58,10 @@ const div2 = document.createElement('div');
 const price = document.createElement('p');
 const btn = document.createElement('button');
 const btn2 = document.createElement('button2');
+const link = document.createElement('a');
+link.href = article.url;
+const linkImage = document.createElement('a');
+linkImage.href = article.imgUrl;
 
 btn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -145,8 +97,15 @@ btn2.innerText = 'Supprimer du panier ';
 btn2.style.backgroundColor = 'red';
 btn2.style.textAlign ='center'
 btn2.style.color = 'white'
+link.style.textDecoration = 'none'
+h2.style.color = 'black'
+h2.style.textAlign = 'center'
+p.style.textAlign = 'center'
+price.style.textAlign = 'center'
 
-divArticle.append(image, h2, p, div2);
+linkImage.appendChild(image)
+link.appendChild(h2)
+divArticle.append(linkImage,link, p, div2);
 div2.append(price, btn, btn2);
 
 return divArticle;
@@ -157,6 +116,7 @@ const addArticleToCart = (article) => {
     panier.push(article);
     console.log(panier);
     span.innerText = panier.length;
+    insertData();
 }
 
 
@@ -169,7 +129,7 @@ const removeArticleToCart = (article) => {
     } else { 
         span.innerText = panier.length;
     }
-   
+    insertData();
 }
 
 const priceCart = () => {
@@ -181,5 +141,16 @@ const priceCart = () => {
 
 
     }
+
+    function insertData() {
+        set(ref(db, "panier/"), {
+          panier
+        })
+        .then (() => {
+        })
+        .catch((error) => {
+        })
+      }
+      
 
 displayArticle()

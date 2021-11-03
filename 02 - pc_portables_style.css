@@ -22,7 +22,6 @@ header {
 
 main {
   background-image: url(img/tiles-5246420_1920.png);
-
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -39,6 +38,7 @@ main {
 
 .searchBtn {
   background-color: rgb(255, 149, 7);
+  height: 30px;
 }
 
 .menu {
@@ -122,7 +122,6 @@ header li:hover .sub-menu {
 
 .articles-container {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: space-around;
 }
@@ -132,6 +131,8 @@ header li:hover .sub-menu {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-around;
+  border: solid 2px black;
+  width: 450px;
 }
 
 .panier img {
@@ -144,16 +145,17 @@ button {
   background-color: green;
   color: black;
   display: block;
-  margin-left: 40%;
+  margin: auto;
   cursor: pointer;
 }
+
 button2 {
   width: 80px;
   border-radius: 50px;
   cursor: pointer;
   color: black;
   display: block;
-  margin-left: 40%;
+  margin: auto;
   display: none;
 }
 /* h2 {

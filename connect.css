@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a{
+    text-decoration: none;
+    color: white;  }
+
+  a:hover{
+    text-decoration: none;
+    color: black;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/tiles-5246420_1920.png);
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(197, 197, 197);
+  }
+
+  .logo {
+    height: 80px;
+    margin-left: 38px;
+  }
+
+
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+  
+    width: 20%;
+  }
+
+
+  .lien {
+    display: flex;
+  
+    height: 50px;
+  }
+
+
+
+  /* ------------------------------------------------------fin header------------------------------------------- */
+
+/* ------------------------------------------------------bouton------------------------------------------- */
+
+.imgconnect img{
+  width: 230px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
+
+.imgconnect2 img{
+  margin-top: 10px;
+  width: 170px;
+  height: auto;
+  cursor: pointer;
+}
+
+.imgconnect2 img:hover{
+background-color: rgba(34, 33, 33, 0.459);
+border-radius: 5px;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+}
+
+
+/* ------------------------------------------------------------------------------------------------- */
+  .box{
+      display: flex;
+      margin-top:5%;
+      justify-content: space-evenly;
+
+      
+  }
+
+h1{
+  color: white;
+  margin-top: 3%;
+  margin-bottom: 5%;
+}
+  .inscription{
+      display: flex;
+      flex-direction: column;
+    border: 3px solid #4d4d4dba;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(126 122 122 / 66%);
+    text-align: center;
+    font-size: 18px;
+    color: white;
+  }
+
+.p1m{
+  margin-top: 4%;
+}
+  .p1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .emailnom{
+    width: 425px;
+    height: 45px;
+    
+  }
+
+  .p2{
+    display: flex;
+    margin-top: 4%;
+    justify-content: space-evenly
+  }
+
+  p{
+    font-size: 22px;
+  }
+
+  .connection{
+    display: flex;
+    flex-direction: column;
+  border: 3px solid #4d4d4dba;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(126 122 122 / 66%);
+  text-align: center;
+  font-size: 18px;
+  color: white;
+        
+  }
+
+  input{
+    border: 3px solid #f6f6f6ba;
+    border-radius: 10px;
+    background-color: rgb(82 79 79 / 66%);
+    width: 215px;
+    height: 38px;
+    font-size: large;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+ .passwordc{
+
+  width: 425px;
+  height: 45px;
+
+ }
+ .divcheck{
+  margin-left: 35px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+
+
+}
+
+
+.check{
+  width: 30px;
+  height: 20px;
+}
+
+
+
+
+
+
+
+
+.mdpoub{
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+  footer {
+    height: 100px;
+    background-color: rgb(72, 72, 72);
+    bottom: 0;
+    /* position: fixed;  */
+    width: 100%;
+
+  }

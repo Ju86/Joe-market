@@ -1,5 +1,9 @@
+let articles = [ 
 
-// Import the functions you need from the SDKs you need
+]
+
+
+  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
   import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-analytics.js";
   // TODO: Add SDKs for Firebase products that you want to use
@@ -19,26 +23,21 @@
 
   // Initialize Firebase
   const app2 = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app2);
 
-import { getDatabase, get, ref, set, child, update, remove }
-from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
 
-const db = getDatabase();
-
-let panier = [];
 
 const displayArticle = () =>
  {
-    const users = fetch('https://projet-commun-joe-default-rtdb.firebaseio.com/pc fixes.json')
+    const users = fetch('https://projet-commun-joe-default-rtdb.firebaseio.com/panier.json')
     .then(async response => {
       try {
-        const articles = await response.json();
-        // console.log(allMyUser);
-        const articlesNodes = articles.map ((article) => {
+        const panier = await response.json();
+        console.log(panier.panier);
+        articles = panier.panier;
+        const panierNodes = articles.map ((article) => {
             return createArticle(article)
         });
-        app.append(...articlesNodes)
+        app.append(...panierNodes)
       } catch (e) {
         console.log(e);
       }
@@ -48,6 +47,7 @@ const displayArticle = () =>
 } 
 
 const app = document.querySelector('.articles-container');
+
 const span = document.querySelector('.spanny');
 
 const createArticle = (article) => {
@@ -60,10 +60,8 @@ const div2 = document.createElement('div');
 const price = document.createElement('p');
 const btn = document.createElement('button');
 const btn2 = document.createElement('button2');
-const link = document.createElement('a');
-link.href = article.url;
-const linkImage = document.createElement('a');
-linkImage.href = article.imgUrl;
+
+
 
 btn.addEventListener('click', (event) => {
     event.preventDefault();
@@ -98,7 +96,6 @@ image.src = article.img;
 image.alt = 'Pc Alienware';
 div2.classList.add('article2');
 
-
 h2.innerText = article.denomination;
 p.innerText = 'DISPO : EN STOCK';
 price.innerText = article.price;
@@ -106,31 +103,19 @@ btn.innerText = 'Ajouter au panier';
 btn2.innerText = 'Supprimer du panier ';
 btn2.style.backgroundColor = 'red';
 btn2.style.textAlign = 'center'
-btn2.style.color = 'white'
-link.style.textDecoration = 'none'
-h2.style.color = 'black'
-h2.style.textAlign = 'center'
-p.style.textAlign = 'center'
-price.style.textAlign = 'center'
 
-linkImage.appendChild(image)
-link.appendChild(h2)
-divArticle.append(linkImage, link,  p, div2 );
+divArticle.append(image, h2, p, div2, );
 div2.append(price, btn, btn2, );
 
 return divArticle;
 
 }
 
-
-
-
 // fonction ajout panier 
 const addArticleToCart = (article) => {
     panier.push(article);
     console.log(panier);
     span.innerText = panier.length;
-    insertData();
 }
 
 
@@ -143,7 +128,7 @@ const removeArticleToCart = (article) => {
     } else { 
         span.innerText = panier.length;
     }
-   insertData();
+   
 }
 
 const priceCart = () => {
@@ -155,15 +140,8 @@ const priceCart = () => {
 }
 
 
-function insertData() {
-  set(ref(db, "panier/"), {
-    panier
-  })
-  .then (() => {
-  })
-  .catch((error) => {
-  })
-}
+
+
 
 displayArticle()
 

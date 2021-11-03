@@ -7,8 +7,11 @@
          "details": "Smartphone 5G-LTE IP68 Dual SIM - Apple A15 Bionic Hexa-Core - RAM 6 Go - Ecran Super Retina XDR OLED ProMotion 120 Hz 6.7' 1284 x 2778 - 128 Go - NFC/Bluetooth 5.0 - iOS 15",
          "dispo": "EN STOCK",
          "prix": 1259.00,
-         "visu": "img/iphone13.jpg",
-         "compo": "iPhone 13 Pro Max. Un système photo pro amélioré comme jamais. Un écran Super Retina XDR de 6,7 pouces avec technologie ProMotion pour plus de rapidité et de réactivité. La puce A15 Bionic, d'une vitesse fulgurante. La 5G ultra-rapide."
+         "visu": "iphone13.jpg",
+         "compo": "iPhone 13 Pro Max. Un système photo pro amélioré comme jamais. Un écran Super Retina XDR de 6,7 pouces avec technologie ProMotion pour plus de rapidité et de réactivité. La puce A15 Bionic, d'une vitesse fulgurante. La 5G ultra-rapide.",
+         "type": "",
+         "url": "",
+         "imgUrl":""  
     },
     
     {
@@ -16,8 +19,11 @@
         "details": "Smartphone 4G-LTE Dual SIM - Helio P35 8-Core 2.3 GHz - RAM 3 Go - Ecran tactile 6.5' 720 x 1600 - 32 Go - NFC/Bluetooth 5.0 - 5000 mAh - Android 11",
         "dispo": "STOCK EPUISE",
         "prix": 159.95,
-        "visu": "img/samsunggalax.jpg",
-        "compo":"Le Samsung Galaxy A03s est un smartphone élégant et accessible au plus grand nombre. Il embarque notamment un processeur Helio P35 Octo-Core cadencé à 2.3 GHz, 3 Go de RAM et une capacité de stockage de 32 Go."
+        "visu": "samsunggalax.jpg",
+        "compo":"Le Samsung Galaxy A03s est un smartphone élégant et accessible au plus grand nombre. Il embarque notamment un processeur Helio P35 Octo-Core cadencé à 2.3 GHz, 3 Go de RAM et une capacité de stockage de 32 Go.",
+        "type": "",
+        "url": "",
+        "imgUrl":""  
     },
     
     {
@@ -25,8 +31,11 @@
         "details": "Smartphone 4G-LTE Advanced Dual SIM - Helio G95 Octo-Core 2.05 GHz - RAM 6 Go - Ecran tactile AMOLED 6.43' 1080 x 2400 - 128 Go - NFC/Bluetooth 5.1-5000 mAh-Android 11",
         "dispo": "EN STOCK",
         "prix": 249.95,
-        "visu": "img/Xiamomiredmi.jpg",
-        "compo":"Capturez de nouvelles aventures et conservez vos souvenirs avec le Xiaomi Redmi Note 10S. Pour cela, il se dote d'un superbe écran tactile AMOLED de 6.43' affichant une résolution Full HD+ de 1080 x 2400 pixels et intègre un processeur Helio G95 Octo-Core cadencé à 2.05 GHz."
+        "visu": "Xiamomiredmi.jpg",
+        "compo":"Capturez de nouvelles aventures et conservez vos souvenirs avec le Xiaomi Redmi Note 10S. Pour cela, il se dote d'un superbe écran tactile AMOLED de 6.43' affichant une résolution Full HD+ de 1080 x 2400 pixels et intègre un processeur Helio G95 Octo-Core cadencé à 2.05 GHz.",
+        "type": "",
+        "url": "",
+        "imgUrl":""  
     },
     
     {
@@ -34,8 +43,11 @@
         "details": "Téléphone 4G-LTE IP68 Dual SIM - MediaTek MTK6731 Quad-Core 1.1 GHz - RAM 512 Mo - Ecran 2.4' 240 x 320 - 4 Go - Bluetooth 4.2 - 2300 mAh",
         "dispo": "EN STOCK",
         "prix": 119.95,
-        "visu": "img/crosscall.jpg",
-        "compo": "Le Crosscall Core-S4 est le téléphone idéal pour les personnes recherchant la compacité, la solidité et la simplicité d'un téléphone à touches. 4G, il est équipé d'un processeur MediaTek MTK6731 Quad-Core cadencé à 1.1 GHz, de 512 Mo de RAM, d'une capacité de stockage de 4 Go et d'un écran de 2.4'"
+        "visu": "crosscall.jpg",
+        "compo": "Le Crosscall Core-S4 est le téléphone idéal pour les personnes recherchant la compacité, la solidité et la simplicité d'un téléphone à touches. 4G, il est équipé d'un processeur MediaTek MTK6731 Quad-Core cadencé à 1.1 GHz, de 512 Mo de RAM, d'une capacité de stockage de 4 Go et d'un écran de 2.4'",
+        "type": "",
+        "url": "",
+        "imgUrl":""  
     } ],
 
         "pc fixes" : [
@@ -47,7 +59,10 @@
                 "Processeur": "Intel Core i7-11700KF",
                 "dispo": "EN STOCK",
                 "price": 2199.95,
-                "img": "img/PCFIXE1.jpg"
+                "img": "img/PCFIXE1.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""            
             },
 
             {
@@ -57,7 +72,10 @@
                 "Processeur": "Intel Core i5-11400",
                 "dispo": "EN STOCK",
                 "price": 899.95,
-                "img": "img/PCFIXE2.jpg"
+                "img": "img/PCFIXE2.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""  
             },
 
             {
@@ -67,7 +85,10 @@
                 "Processeur": "Intel Core i7-10700K",
                 "dispo": "EN STOCK",
                 "price": 2599.95,
-                "img": "img/PCFIXE3.jpg"
+                "img": "img/PCFIXE3.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""  
             },
 
             {
@@ -77,7 +98,10 @@
                 "Processeur"	:"Intel Core i5-10400F" ,
                 "dispo": "EN STOCK",
                 "price": 699.95,
-                "img":"img/PCFIXE4.jpg"
+                "img":"img/PCFIXE4.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""  
             },
 
             {
@@ -87,7 +111,10 @@
                 "Processeur": "Intel Core i3-9100",
                 "dispo": "EN STOCK",
                 "price": 559.95,
-                "img": "img/PCFIXE5.jpg"
+                "img": "img/PCFIXE5.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""  
             },
 
             {
@@ -97,7 +124,10 @@
                 "Processeur": "AMD Ryzen 7 5700G",
                 "dispo": "EN STOCK",
                 "price": 1699.95,
-                "img": "img/PCFIXE6.jpg"
+                "img": "img/PCFIXE6.jpg",
+                "type": "fixe",
+                "url": "",
+                "imgUrl":""  
             } ],
 
           "pc portables" : [
@@ -108,7 +138,10 @@
               "Processeur": "Intel Core i7-11800H",
               "dispo": "EN STOCK",
               "price": 2599.95,
-              "img": "img/PCPORTABLE1.jpg"
+              "img": "img/PCPORTABLE1.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           },
           {
               "id": 2,
@@ -117,7 +150,10 @@
               "Processeur": "Intel Core i5-1135G7",
               "dispo": "EN STOCK",
               "price": 999.95,
-              "img": "img/PCPORTABLE2.jpg"
+              "img": "img/PCPORTABLE2.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           },
           {
               "id": 3,
@@ -126,7 +162,10 @@
               "Processeur": "Intel Core i7-10870H",
               "dispo": "EN STOCK",
               "price": 2099.95,
-              "img": "img/PCPORTABLE3.jpg"
+              "img": "img/PCPORTABLE3.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           },
           {
               "id": 4,
@@ -135,7 +174,10 @@
               "Processeur":"Intel Core i7-11800H",
               "dispo": "EN STOCK",
               "price": 3699.95,
-              "img": "img/PCPORTABLE4.jpg"
+              "img": "img/PCPORTABLE4.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           },
           {
               "id": 5,
@@ -144,7 +186,10 @@
               "Processeur": "Intel Core i3-1125G4",
               "dispo": "EN STOCK",
               "price": 599.95,
-              "img": "img/PCPORTABLE5.jpg"
+              "img": "img/PCPORTABLE5.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           },
           {
               "id": 6,
@@ -153,7 +198,10 @@
               "Processeur": "Intel Core i3-1115G4",
               "dispo": "EN STOCK",
               "price": 699.95,
-              "img": "img/PCPORTABLE6.jpg"
+              "img": "img/PCPORTABLE6.jpg",
+              "type": "portable",
+              "url": "",
+              "imgUrl":""  
           }
           ]
           ,

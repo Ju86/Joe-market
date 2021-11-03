@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(197, 197, 197);
+  }
+  
+  main {
+    background-image: url(img/tiles-5246420_1920.png);
+    height: 720px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .logo {
+    height: 80px;
+    margin-left: 38px;
+  }
+  
+  .search.bar {
+    display: flex;
+    height: 30px;
+  }
+  
+  .searchBtn {
+    background-color: rgb(255, 149, 7);
+    height: 30px;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+  
+    width: 20%;
+  }
+  
+  .lien {
+    display: flex;
+    text-decoration: none;
+    height: 50px;
+  }
+  
+  .countPanier {
+    background-color: rgb(255, 149, 7);
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+  }
+  
+  .spanny {
+    color: white;
+    font-size: 22px;
+  
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu2 {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(72, 72, 72);
+  }
+  
+  header li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+  
+  header li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+  }
+  
+  header li a:hover {
+    background-color: rgb(72, 72, 72);
+    color: rgb(255, 149, 7);
+  }
+  
+  header li:hover .sub-menu {
+    display: block;
+  }
+  
+  .sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgb(72, 72, 72);
+    width: 200px;
+  }
+  
+  .sub-menu li {
+    display: block;
+  }
+  .sub-menu li a {
+    color: white;
+  }
+  
+  .sub-menu li:hover a {
+    background-color: rgb(255, 149, 7);
+    color: black;
+  }
+  
+  .articles-container {
+    display: flex;
+    margin-top: 35px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .articles-container img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .panier img {
+    height: 60px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background-color: rgb(72, 72, 72);
+  }
+  
+  footer h2 {
+    font-size: 20px;
+  }
+  
+  .lien-footer {
+    margin: 30px;
+    text-decoration: none;
+  }
+  
+p {
+    margin-top: 35px;
+    font-size: 2em;
+   
+} 
+
+h2 {
+    margin-top: 18px;
+}
+
+button {
+  width: 80px;
+  border-radius: 50px;
+}
